@@ -34,7 +34,7 @@ module.exports = function (content) {
 	catch (error) { }
 
 	if (limit <= 0 || content.length < limit) {
-		let url = JSON.stringify(`data:${type};charset=utf-8;base64,${data}`);
+		let url = JSON.stringify(`"data:${type};charset=utf-8;base64,${data}"`);
 
 		return `module.exports = ${url}`;
 	}
